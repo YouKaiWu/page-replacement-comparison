@@ -1,34 +1,58 @@
 # Algorithm-comparison
 - 比較四種 Page Replacement 演算法(FIFO, ARB, Optimal, Custom)的差異
 
-## 架構
+## 專案結構說明
 
-src/main/java/com/example/
-├── model/                              # 資料模型
-│   └── ReferenceString.java            # page reference 序列
-│
-├── generator/                          # 產生測試資料
-│   ├── ReferenceStringGenerator.java   # 抽象類，定義產生器的基本介面與行為
-│   ├── RandomGenerator.java        
-│   ├── LocalityGenerator.java          
-│   └── CustomGenerator.java            # 產生高頻率(90%)的 hotPages，與低頻率的 coldPages
-│
-├── algorithm/                          # Page Replacement 演算法
-│   ├── Algorithm.java                  # 抽象類，定義演算法的基本介面與行為
-│   ├── FIFO.java
-│   ├── ARB.java
-│   ├── Optimal.java
-│   └── Custom.java                     
-│
-├── result/                             # 統計與輸出
-│   ├── Data.java                       # 儲存一次模擬的結果 (page faults, disk write, interrupt)
-│   ├── Result.java                     # 儲存 Data + generator 名稱 + algorithm 名稱
-│   └── ResultExporter.java             # 負責格式化、輸出比較結果
-│
-├── runner/
-│   └── AlgorithmRunner.java            # 統一調用 generator + algorithm，跑實驗
-│
-└── Main.java                           # 程式進入點
+### model
+#### ReferenceString.java
+存放 page reference 序列。
+
+### generator
+#### ReferenceStringGenerator.java
+抽象類，定義產生器的基本介面與行為，用來生成 page reference 序列。
+
+#### RandomGenerator.java
+隨機生成 page reference 序列。
+
+#### LocalityGenerator.java
+生成具有區域性特徵的 page reference 序列。
+
+#### CustomGenerator.java
+生成高頻率 (90%) 的 hotPages 與低頻率的 coldPages。
+
+### algorithm
+#### Algorithm.java
+抽象類，定義 Page Replacement 演算法的基本介面與行為。
+
+#### FIFO.java
+First-In-First-Out 實作。
+
+#### ARB.java
+Additional-reference-bits 實作。
+
+#### Optimal.java
+Optimal 實作，理論上最低的 page fault。
+
+#### Custom.java
+自定義 Page Replacement 演算法，freq + time decay。
+
+### result
+#### Data.java
+儲存一次模擬的結果，包括 page faults、disk write、interrupt。
+
+#### Result.java
+儲存 Data、generator 名稱與 algorithm 名稱，方便比較。
+
+#### ResultExporter.java
+負責將比較結果格式化並輸出成 excel 表格。
+
+### runner
+#### AlgorithmRunner.java
+統一調用 generator 與 algorithm，執行實驗。
+
+### Main.java
+專案進入點。
+
 
 ## 環境
 
