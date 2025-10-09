@@ -16,9 +16,10 @@
 
 ---
 ### 執行方式
-- note: 請使用 Bash 執行腳本、請確保 `run.sh` 有執行權限
-- 在專案根目錄下執行以下指令：
+- note: 請使用 **Bash** 執行腳本、請確保 `run.sh` 有執行權限 
+    - 可以安裝 [GitBash](https://git-scm.com/downloads)
+- 在**專案根目錄**下執行以下指令：
 `./run.sh` or `sh run.sh`
 #### 執行輸出檔案
-- log 檔存在 `run.log`
-- 實驗結果存在 `./result` 底下的 excel 檔
+- 執行的 log 檔存在**專案根目錄** `run.log`
+- 實驗結果存在**專案根目錄** `result` 資料夾底下的 excel 檔
