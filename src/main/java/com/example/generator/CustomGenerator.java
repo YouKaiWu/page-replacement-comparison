@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.example.model.ReferenceString;
 
-// 產生高頻率(90%)的 hotPages，與低頻率的 coldPages
+// generate high frequent hotPages(90%) and low frequent coldPages(10%)
 public class CustomGenerator extends ReferenceStringGenerator{
 
     public CustomGenerator(String name) {

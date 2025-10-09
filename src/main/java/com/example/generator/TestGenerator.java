@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.example.model.ReferenceString;
-
+// textbook example reference string
 public class TestGenerator extends ReferenceStringGenerator{
 
     public TestGenerator(String name) {
