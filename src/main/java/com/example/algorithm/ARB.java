@@ -24,7 +24,7 @@ public class ARB extends Algorithm {
         this.frames = new ArrayList<>();
         this.ARBList = new ArrayList<>();
         this.visited = new ArrayList<>();
-        this.timeInterval = 100;
+        this.timeInterval = 8;
     }
 
     @Override
